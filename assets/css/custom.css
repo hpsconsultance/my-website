@@ -1,0 +1,62 @@
+/* Custom Styles */
+
+/* Resize Header Logo */
+.main-header-area .header-logo img {
+    width: auto !important;
+    max-width: 150px;
+    margin-top: 10px;
+    /* Added gap from the top */
+}
+
+/* Custom Slider Background */
+.slide-custom {
+    background-image: url("../images/slider/dark-consultancy-banner.png") !important;
+}
+
+/* Force Slider Content Visibility (Override slider animations for static banner) */
+.slider-content>* {
+    opacity: 1 !important;
+    visibility: visible !important;
+    animation: none !important;
+    -webkit-animation: none !important;
+    transform: none !important;
+}
+
+.intro11-slider .slider-content .title,
+.intro11-slider .slider-content .sub-title {
+    color: #ffffff !important;
+    opacity: 1 !important;
+}
+
+
+/* Footer Adjustments */
+.footer-logo img {
+    max-width: 150px !important;
+    height: auto !important;
+}
+
+.footer-section .widget-list {
+    padding-left: 0;
+    list-style: none;
+}
+
+.footer-section .widget-list li {
+    margin-bottom: 15px;
+    /* Consistent vertical spacing */
+    display: block;
+    margin-left: 0 !important;
+    padding-left: 0 !important;
+}
+
+.footer-section .widget-list li a {
+    display: block;
+}
+
+.footer-section .single-footer-widget .desc-content {
+    max-width: 350px;
+    /* Prevent description from stretching too wide */
+}
+
+.footer-section .single-footer-widget {
+    margin-bottom: 30px;
+}
