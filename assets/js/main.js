@@ -229,7 +229,11 @@
             $.ajax({
                 type: 'POST',
                 url: $(form).attr('action'),
-                data: formData
+                data: formData,
+                dataType: "json",
+                headers: {
+                    'Accept': 'application/json'
+                }
             })
             .done(function(response) {
                 // Make sure that the formMessages div has the 'success' class.
@@ -237,7 +241,7 @@
                 $(formMessages).addClass('success');
 
                 // Set the message text.
-                $(formMessages).text(response);
+                $(formMessages).text("Thank You! Your message has been sent.");
 
                 // Clear the form.
                 $('#contact-form input,#contact-form textarea').val('');
@@ -248,8 +252,8 @@
                 $(formMessages).addClass('error');
 
                 // Set the message text.
-                if (data.responseText !== '') {
-                    $(formMessages).text(data.responseText);
+                if (data.responseJSON && data.responseJSON.error) {
+                    $(formMessages).text(data.responseJSON.error);
                 } else {
                     $(formMessages).text('Oops! An error occured and your message could not be sent.');
                 }
