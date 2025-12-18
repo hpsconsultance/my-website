@@ -60,3 +60,36 @@
 .footer-section .single-footer-widget {
     margin-bottom: 30px;
 }
+
+/* Footer Background Color */
+.footer-section {
+    background-color: #e8e8e8 !important;
+}
+
+.footer-section .footer-widget-area {
+    background-color: transparent;
+}
+
+.footer-section .footer-copyright-area {
+    background-color: transparent;
+}
+
+/* About Page Image Size Reduction */
+body .about-section .marketing-about-thumb img {
+    max-width: 50% !important;
+    height: auto !important;
+    margin: 0 auto;
+    display: block;
+}
+
+body .about-section .marketing-about-thumb {
+    text-align: center;
+}
+
+/* Index Page - Full Width Images */
+body:not([class*="about"]) .about-section .marketing-about-thumb img,
+.about-section .marketing-about-thumb img.fit-image {
+    max-width: 100% !important;
+    width: 100% !important;
+    margin: 0;
+}
